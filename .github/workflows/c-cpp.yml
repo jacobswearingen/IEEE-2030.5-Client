@@ -1,0 +1,25 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    # GCC compiler version 4.6 or greater
+    # OpenSSL version 1.1.0 or greater
+    # GNU Bash -- for building
+
+To build the framework library and applications run:
+
+
+    steps:
+    - uses: actions/checkout@v4
+    - run: sudo apt install openssl
+    - name: build
+      run:   ./build.sh
