@@ -15,4 +15,4 @@ jobs:
     - uses: actions/checkout@v4
     - run: sudo apt install openssl
     - name: build
-      run:   ./build.sh
+      run: sudo ./build.sh
